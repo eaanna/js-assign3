@@ -11,8 +11,7 @@ function currentSlide(n) {
 
 function showSlides(n) {
     var slides = document.getElementsByClassName("my-slides");
-    var dots = document.getElementsByClassName("dots");
-
+    
     if (n < 1) {
         slideIndex = slides.length;
     }
@@ -21,26 +20,24 @@ function showSlides(n) {
         slideIndex = 1;
     }
 
-   
-
+    var dotContainer = document.getElementById("dotcontainer");
+    htmlDots = '<div style="text-align:center">';
     for(i=0; i<slides.length; i++) {
         slides[i].style.display = "none";
+        htmlDots += '<span class="dot" onclick="currentSlide(' + slideIndex +')"></span>';
        
     }
+    htmlDots += '</div>';
+    dotContainer.innerHTML = htmlDots;
 
-    htmlBuilder = '<div style="text-align:center">';
-    htmlBuilder += '<span class="dot" onclick="currentSlide(1)"></span>';
-    htmlBuilder += '<span class="dot" onclick="currentSlide(2)"></span>';
-    htmlBuilder += '<span class="dot" onclick="currentSlide(3)"></span>';
-    htmlBuilder += '</div>';
+    slides[slideIndex-1].style.display = "block";
 
+    var dots = document.getElementsByClassName("dot");
 
     for(i=0; i<dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
 
-
-    slides[slideIndex-1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
 

@@ -8,8 +8,20 @@
   overflow: hidden;
 }
 
+/*
+#slider {
+  max-width: 4000px;
+  animation-name:slider;
+	animation-duration:10s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count:infinite;
+}
+#slider img {
+  max-width: 1000px;
+}
 /* Hide the images by default */
 .my-slides {
+
 }
 
 /* Next & previous buttons */
@@ -60,6 +72,9 @@
 }
 
 /* The dots/bullets/indicators */
+#dotcontainer {
+  border: black, solid, 2px;
+}
 .dot {
   cursor: pointer;
   height: 15px;
@@ -75,7 +90,7 @@
   background-color: #717171;
 }
 
-/* Fading animation 
+/*
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
@@ -92,7 +107,7 @@
   from {opacity: .4}
   to {opacity: 1}
 }
-*/
+
 
 @keyframes slider {
 	0% { transform: translateX(0px); }
@@ -105,14 +120,4 @@
 	95% { transform: translateX(3000px); }
 	100% { transform: translateX(0px);  }
 }
-.slider1{
-  animation-name:slider;
-	animation-duration:10s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count:infinite;
-  max-width: 4000px;
-}
-
-.prev, .next {
-  animation-play-state: paused;
-}
+*/
